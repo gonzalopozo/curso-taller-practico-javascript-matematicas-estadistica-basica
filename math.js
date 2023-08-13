@@ -53,7 +53,7 @@ function calcularAlturaTrianguloIsosceles1(ladoA, ladoB, base) { // Primer punto
 
 function calcularAlturaTrianguloIsosceles2(ladoEquivalente, base) { // Segundo punto de vista (punto de vista del profesor)
     if (ladoEquivalente == base) {
-        console.warn(`
+        console.error(`
         • Los argumentos definidos en la función como los lados y base son iguales.
         • Para que esta función se ejecute correctamente los lados equivalentes no deben ser iguales a la base.
         • ${ladoEquivalente} = ${base}`);
