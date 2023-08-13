@@ -40,26 +40,31 @@ function calcularTriangulo(lado1, lado2, base, altura) {
     }
 }
 
-function calcularAlturaTrianguloIsosceles1(ladoA, ladoB, base) { // Primer punto de vista (mi punto de vista)
-    if (ladoA == ladoB) {
-        return Math.sqrt(Math.pow(ladoA, 2) - ((Math.pow(base, 2)) / 4));
-    } else  {
-        console.warn(`
-        • Los argumentos definidos en la función como los lados no son iguales.
-        • Para que esta función se ejecute correctamente los lados deben ser iguales.
-        • ${ladoA} ≠ ${ladoB}`);
-    }
-}
+// function calcularAlturaTrianguloIsosceles1(ladoA, ladoB, base) { // Primer punto de vista (mi punto de vista)
+//     if (ladoA == ladoB) {
+//         return Math.sqrt(Math.pow(ladoA, 2) - ((Math.pow(base, 2)) / 4));
+//     } else  {
+//         console.warn(`
+//         • Los argumentos definidos en la función como los lados no son iguales.
+//         • Para que esta función se ejecute correctamente los lados deben ser iguales.
+//         • ${ladoA} ≠ ${ladoB}`);
+//     }
+// }
 
-function calcularAlturaTrianguloIsosceles2(ladoEquivalente, base) { // Segundo punto de vista (punto de vista del profesor)
+function calcularAlturaTrianguloIsosceles(ladoEquivalente, base) { // Segundo punto de vista (punto de vista del profesor)
     if (ladoEquivalente == base) {
-        console.error(`
+        console.warn(`
         • Los argumentos definidos en la función como los lados y base son iguales.
         • Para que esta función se ejecute correctamente los lados equivalentes no deben ser iguales a la base.
         • ${ladoEquivalente} = ${base}`);
     } else {
         return Math.sqrt(Math.pow(ladoEquivalente, 2) - ((Math.pow(base, 2)) / 4));
     }
+}
+
+function calcularAlturaCualquierTriangulo(ladoA, ladoB, base) {
+    const superPerimetroFunción = (ladoA + ladoB + base) / 2;
+    return (2 / base) * (Math.sqrt(superPerimetroFunción * (superPerimetroFunción - base) * (superPerimetroFunción - ladoA) * (superPerimetroFunción - ladoB)))
 }
 
 console.table({
