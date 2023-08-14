@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Matemáticas con JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Taller de Matemáticas con JavaScript</h1>
+
+    
+    <form id="form">
+        <p>Calculadora de descuentos de precios de articulos:</p>
+        <label for="inputPrecioOriginal" id="labelInputPrecioOriginal">Precio original de tu producto:
+            <input type="number" placeholder="Precio del artículo" id="inputPrecioOriginal">
+        </label>
+        <label for="inputPorcentajeDescuento" id="labelInputPorcentajeDescuento">Descuento de tu producto:
+            <input type="number" placeholder="Porcentaje de descuento" id="inputPorcentajeDescuento">
+        </label>
+        <button id="btnCalcular" type="button">Calcular</button>
+    </form>
+
+    <br>
+
+    <form id="form2">
+        <p>Calculadora de descuentos de precios de articulos por cupones:</p>
+        <label for="inputSuscripcionPrecioOriginal" id="labelInputSuscripcionPrecioOriginal">Precio original de tu suscripción:
+            <input type="number" placeholder="Precio de la suscripción" id="inputSuscripcionPrecioOriginal">
+        </label>
+        <div id="contenedorVerano20">
+            <input type="radio" name="cupones" id="verano20" value="verano20">
+            <label for="verano20">¡Descuento del 20% de verano!</label>
+        </div>
+        <div id="contenedorOtono25">
+            <input type="radio" name="cupones" id="otono25" value="otono25">
+            <label for="otono25">¡Descuento del 25% de otoño!</label>
+        </div>
+        <div id="contenedorInvierno30">
+            <input type="radio" name="cupones" id="invierno30" value="invierno30">
+            <label for="invierno30">¡Descuento del 30% de invierno!</label>
+        </div>
+        <button id="btnCalcular2" type="button">Calcular</button>
+    </form>
+
+    <form id="form3">
+        <p>Calculadora de descuentos de precios de articulos por cupones ocultos:</p>
+        <label for="inputSuscripcionPrecioOriginalCuponOculto" id="labelInputSuscripcionPrecioOriginalCuponOculto">Precio original de tu producto:
+            <input type="number" placeholder="Precio del artículo" id="inputSuscripcionPrecioOriginalCuponOculto">
+        </label>
+        <label for="inputNombreCupon" id="labelInputNombreCupon">Descuento de tu producto:
+            <input type="text" placeholder="Cupón de descuento" id="inputNombreCupon">
+        </label>
+        <button id="btnCalcular3" type="button">Calcular</button>
+    </form>
+
+    <form id="form4">
+        <p>Calculadora de descuentos de precios de articulos por cupones ocultos con objetos y arrays:</p>
+        <label for="inputSuscripcionPrecioOriginalCuponOcultoObsYArr" id="labelInputSuscripcionPrecioOriginalCuponOcultoObsYArr">Precio original de tu producto:
+            <input type="number" placeholder="Precio del artículo" id="inputSuscripcionPrecioOriginalCuponOcultoObsYArr">
+        </label>
+        <label for="inputNombreCuponObsYArr" id="labelInputNombreCuponObsYArr">Descuento de tu producto:
+            <input type="text" placeholder="Cupón de descuento" id="inputNombreCuponObsYArr">
+        </label>
+        <button id="btnCalcular4" type="button">Calcular</button>
+    </form>
+
+    <script src="./descuentos.js"></script>
+</body>
+</html>
