@@ -1,23 +1,25 @@
 // Mi punto de vista
 
+const PlatziMath = {};
+
 const numeros = []
 
-function añadirNumerosArray(numero) {
+PlatziMath.añadirNumerosArray = function añadirNumerosArray(numero) {
     numeros.push(Number(numero));
 }
 
-function sumaValoresArray(array) {
+PlatziMath.sumaValoresArray = function sumaValoresArray(array) {
     const resultadoSuma = array.reduce((acumulador, valorActual) => acumulador + valorActual); // Esto es lo mismo que esto === const resultadoSuma = array.reduce((a, b) => a + b);
     return resultadoSuma;
 }
 
-function calcularPromedio(sumaArray, array) {
+PlatziMath.calcularPromedio = function calcularPromedio(sumaArray, array) {
     return (sumaArray / array.length);
 }
 
 // El punto de vista del profesor
 
-function calcularPromedio2(lista) {
+PlatziMath.calcularPromedio2 = function calcularPromedio2(lista) {
     let sumaLista = 0;
     for (let i = 0; i < lista.length; i++) {
         sumaLista = sumaLista + lista[i];
@@ -30,15 +32,15 @@ function calcularPromedio2(lista) {
 
 // --------------------------------
 
-function esPar(array) {
+PlatziMath.esPar = function esPar(array) {
     return !(array.length % 2);
 }
 
-function esImpar(array) {
+PlatziMath.esImpar = function esImpar(array) {
     return array.length % 2;
 }
 
-function calcularMediana(array) {
+PlatziMath.calcularMediana = function calcularMediana(array) {
     const arrayEsPar = esPar(array);
     const arrayOrdenado = array.sort((a, b) => a - b);
 
@@ -62,7 +64,7 @@ function calcularMediana(array) {
 
 // --------------------------------
 
-function calcularModa(array) {
+PlatziMath.calcularModa = function calcularModa(array) {
     const arrayCount = {};
 
     for (let i = 0; i < array.length; i++) {
@@ -95,7 +97,7 @@ function calcularModa(array) {
     }
 }
 
-function ordenarListaBidimensional(listaDesordenada, i) {
+PlatziMath.ordenarListaBidimensional = function ordenarListaBidimensional(listaDesordenada, i) {
     function ordenarListaSort(valorAcumulado, nuevoValor) {
         return valorAcumulado[i] - nuevoValor[i];
     }
