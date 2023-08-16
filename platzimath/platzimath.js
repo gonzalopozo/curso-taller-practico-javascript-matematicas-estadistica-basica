@@ -59,3 +59,47 @@ function calcularMediana(array) {
         return medianaListaImpar;
     }
 }
+
+// --------------------------------
+
+function calcularModa(array) {
+    const arrayCount = {};
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (arrayCount[element]) {
+        arrayCount[element] += 1;
+        } else {
+            arrayCount[element] = 1;
+        }
+    }
+
+    const arrayLista = Object.entries(arrayCount);
+
+    const arrayOrdenado = ordenarListaBidimensional(arrayLista, 1);
+
+    const arrayOrdenadoMaxNumber = arrayOrdenado[arrayOrdenado.length - 1];
+    const arrayOrdenadoMaxNumberAnterior = arrayOrdenado[arrayOrdenado.length - 2];
+
+    // console.log({arrayCount, arrayLista, arrayOrdenado, arrayOrdenadoMaxNumber});
+
+
+    if (arrayOrdenadoMaxNumber[1] === arrayOrdenadoMaxNumberAnterior[1]) {
+        const moda = 'No hay moda';
+        return moda;
+    } else {
+        const moda = arrayOrdenadoMaxNumber[0];
+        console.log(`La moda del array es ${arrayOrdenadoMaxNumber[0]} que se repite ${arrayOrdenadoMaxNumber[1]} veces en el array .`);
+        return moda;
+    }
+}
+
+function ordenarListaBidimensional(listaDesordenada, i) {
+    function ordenarListaSort(valorAcumulado, nuevoValor) {
+        return valorAcumulado[i] - nuevoValor[i];
+    }
+
+    const lista = listaDesordenada.sort(ordenarListaSort)
+    return lista;
+}
