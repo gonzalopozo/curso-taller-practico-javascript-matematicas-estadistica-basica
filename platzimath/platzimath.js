@@ -41,7 +41,7 @@ PlatziMath.esImpar = function esImpar(array) {
 }
 
 PlatziMath.calcularMediana = function calcularMediana(array) {
-    const arrayEsPar = esPar(array);
+    const arrayEsPar = PlatziMath.esPar(array);
     const arrayOrdenado = array.sort((a, b) => a - b);
 
     if (arrayEsPar) {
