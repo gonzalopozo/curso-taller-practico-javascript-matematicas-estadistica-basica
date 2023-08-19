@@ -62,6 +62,12 @@ PlatziMath.calcularMediana = function calcularMediana(array) {
     }
 }
 
+PlatziMath.ordenarLista = function ordenarLista(array) {
+    const arrayOrdenado2 = array.sort((a, b) => a - b)
+
+    return arrayOrdenado2;
+}
+
 // --------------------------------
 
 PlatziMath.calcularModa = function calcularModa(array) {

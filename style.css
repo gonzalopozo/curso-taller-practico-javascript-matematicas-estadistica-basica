@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,0,66,1) 15%, rgba(9,9,121,1) 30%, rgba(5,96,178,1) 60%, rgba(4,174,209,1) 100%);    
+    background-repeat: no-repeat;
+    height: 98.5vh;
+    overflow-y: hidden;
+
+}
+
+#contenedorTitulo {
+    font-size: 32px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#labelInputPrecioOriginal {
+    display: block;
+    margin: 5px;
+}
+
+#labelInputPorcentajeDescuento {
+    display: block;
+    margin: 5px;
+}
+
+#labelInputSuscripcionPrecioOriginal {
+    display: block;
+    margin: 15px;
+}
+
+button {
+    display: block;
+    padding: 3px;
+    margin: 5px;
+}
+
+#contenedorVerano20 {
+    display: block;
+}
+
+#contenedorOtono25 {
+    display: block;
+}
+
+#contenedorInvierno30 {
+    display: block;
+}
+
+p {
+    margin: 2px;
+    font-size: 24px;
+    text-decoration: underline;    
+    display: flex;
+    justify-content: center;
+}
+
+#form3 label {
+    display: block;
+    margin: 5px;
+}
+
+#form4 label {
+    display: block;
+    margin: 5px;
+}
+
+ul {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+ul li {
+    margin: 15px;
+    padding: 5px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul li:visited {
+    text-decoration: none;
+    color: none;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+    margin: 20px;
+
+    background-color: grey;
+}
