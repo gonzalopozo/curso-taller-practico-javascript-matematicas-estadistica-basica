@@ -10,6 +10,8 @@ function encontrarPersona(nombrePersona) {
     }
 }
 
+console.warn('Usa la función encontrarPersona(), mandándole como argumento el nombre de la persona para saber donde trabajo y cuanto dinero gano en cada año de su vida laboral.');
+
 function medianaPorPersona(nombrePersona) {
     const trabajos = encontrarPersona(nombrePersona).trabajos;
 
@@ -21,6 +23,8 @@ function medianaPorPersona(nombrePersona) {
 
     return medianaSalarios;
 }
+
+console.warn('Usa la función medianaPorPersona(), mandándole como argumento el nombre de la persona para saber la mediana de sus sueldos durante su vida laboral.');
 
 function proyeccionPorPersona(nombrePersona) {
     const trabajos = encontrarPersona(nombrePersona).trabajos;
@@ -45,6 +49,8 @@ function proyeccionPorPersona(nombrePersona) {
 
     return `La proyección de salario a futuro de ${nombrePersona} sera de ${nuevoSalario.toFixed(2)}€.`
 }
+
+console.warn('Usa la función proyeccionPorPersona(), mandándole como argumento el nombre de la persona para saber el sueldo esperado (proyección del sueldo según lo ganado durante los años anteriores) para el siguiente año de su vida laboral.');
 
 const empresas = {}
 
@@ -73,6 +79,8 @@ function medianaEmpresaYear(nombre, year) {
         return PlatziMath.calcularMediana(empresas[nombre][year]);
     }
 }
+
+console.warn('Usa la función medianaEmpresaYear(), mandándole como primer argumento el nombre de la empresa y como segundo argumento el año para saber la mediana de los sueldos de todos los trabajadores de esa empresa en un año concreto.');
 
 function proyeccionPorEmpresa(nombre) {
     if (!empresas[nombre]) {
@@ -106,6 +114,8 @@ function proyeccionPorEmpresa(nombre) {
     }
 }
 
+console.warn('Usa la función proyeccionPorEmpresa(), mandándole como argumento el nombre de la empresa para saber la mediana del sueldo esperado (proyección del sueldo según lo ganado durante los años anteriores) para el siguiente año.');
+
 function medianaGeneral() {
     const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name));
 
@@ -113,6 +123,8 @@ function medianaGeneral() {
 
     return mediana;
 }
+
+console.warn('Usa la función medianaGeneral(), para saber la mediana de todos los sueldos.');
 
 function medianaTop10() {
     const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name));
@@ -144,6 +156,8 @@ function medianaTop10() {
     return medianaTop10;
 }
 
+console.warn('Usa la función medianaTop10(), para saber la mediana del sueldo del 10% de personas que ganas más dinero.');
+
 function diferenciaGeneralTop10() {
     const medianGeneral2 = medianaGeneral();
     const medianaTop102 = medianaTop10();
@@ -152,3 +166,5 @@ function diferenciaGeneralTop10() {
 
     return `La diferencia de salarios entre el 10% mayor y la media general es de ${valorDiferencia}€.`;
 }
+
+console.warn('Usa la función diferenciaGeneralTop10(), para saber la diferencia entre la mediana de todos los sueldos y la mediana del sueldo del 10% de personas que ganas más dinero.');

@@ -106,6 +106,9 @@ const coupons = [];
 
 coupons.push(new Coupon('soyGOD', 50), new Coupon('mySelfBetter', 60), new Coupon('iAmHim', 70), new Coupon('tuAbuela', 10))
 
+console.warn('Los cupones para el último formulario están en el siguiente array. Puedes añadir el tuyo usando "coupons.push(new Coupon(`nombre cupon`, `valorPorcentaje`))."');
+console.warn(coupons);
+
 function calcularDescuentoArticuloPorCuponesOcultosObsYArr() {
     const cuponValido = coupons.find(item => item.nombre == inputNombreCuponObsYArr.value)
 

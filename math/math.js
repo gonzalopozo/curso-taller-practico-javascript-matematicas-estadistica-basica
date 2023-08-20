@@ -1,4 +1,4 @@
-console.group('Cuadrado')
+// console.group('Cuadrado')
 
 
 const ladoCuadrado = 5;
@@ -13,15 +13,17 @@ function calcularCuadrado(lado) {
     }
 }
 
-console.table({
-    ladoCuadrado,
-    perimetroCuadrado,
-    areaCuadrado
-});
+console.warn('Para calcular el perímetro y el área del cuadrado usé la función calcularCuadrado(), mandándole como argumento la distancia un lado del cuadrado.');
 
-console.groupEnd('Cuadrado')
+// console.table({
+//     ladoCuadrado,
+//     perimetroCuadrado,
+//     areaCuadrado
+// });
 
-console.group('Triangulo')
+// console.groupEnd('Cuadrado')
+
+// console.group('Triangulo')
 
 const ladoTriangulo1 = 6;
 const ladoTriangulo2 = 6;
@@ -67,20 +69,26 @@ function calcularAlturaCualquierTriangulo(ladoA, ladoB, base) {
     return (2 / base) * (Math.sqrt(superPerimetroFunción * (superPerimetroFunción - base) * (superPerimetroFunción - ladoA) * (superPerimetroFunción - ladoB)))
 }
 
-console.table({
-    ladoTriangulo1,
-    ladoTriangulo2,
-    ladoTrianguloBase,
-    alturaTriangulo,
-    perimetroTriangulo,
-    areaTriangulo,
-    semiperimetroHeron,
-    areaTrianguloHeron
-});
+console.warn('Para calcular el perímetro y el área de un triángulo usé la función calcularTriangulo(), mandándole como primer argumento la distancia del primer lado, como segundo argumento la distancia del segundo lado, como tercer argumento la distancia de la base y como último argumento la altura del triángulo.');
 
-console.groupEnd('Triangulo')
+console.warn('Para calcular la altura de un triángulo isósceles usé la función calcularAlturaTrianguloIsosceles(), mandándole como primer argumento la distancia (similar en este tipo de triángulo) de los uno de los dos lados equivalentes y como segundo argumento la distancia de la base.');
 
-console.group('Circulo')
+console.warn('Para calcular la altura de un triángulo el cual no es isósceles usé la función calcularAlturaCualquierTriangulo, mandándole como primer argumento la distancia del primer lado, como segundo argumento la distancia del segundo lado y por último argumento la distancia de la base.');
+
+// console.table({
+//     ladoTriangulo1,
+//     ladoTriangulo2,
+//     ladoTrianguloBase,
+//     alturaTriangulo,
+//     perimetroTriangulo,
+//     areaTriangulo,
+//     semiperimetroHeron,
+//     areaTrianguloHeron
+// });
+
+// console.groupEnd('Triangulo')
+
+// console.group('Circulo')
 
 const radioCiruclo = 3;
 const diametroCirculo = radioCiruclo * 2;
@@ -98,11 +106,13 @@ function calcularCirculo(radio) {
     }
 }
 
-console.table({
-    radioCiruclo,
-    diametroCirculo,
-    circunferencia,
-    areaCirculo
-});
+console.warn('Para calcular la circunferencia y el área de un círculo usé la función calcularCirculo(), mandándole como argumento el radio del círculo.');
 
-console.groupEnd('Circulo')
+// console.table({
+//     radioCiruclo,
+//     diametroCirculo,
+//     circunferencia,
+//     areaCirculo
+// });
+
+// console.groupEnd('Circulo')

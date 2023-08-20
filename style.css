@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@300&family=Roboto&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,19 +7,50 @@
 }
 
 body {
-    background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(2,0,66,1) 15%, rgba(9,9,121,1) 30%, rgba(5,96,178,1) 60%, rgba(4,174,209,1) 100%);    
     background-repeat: no-repeat;
-    height: 98.5vh;
-    overflow-y: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8DCAE2;
+    font-family: 'Roboto', sans-serif;
+}
 
+main {
+    width: 70vw;
+    height: 80vh;
+    background-color: #72AABA; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 15px;
+    margin: 50px;   
+    border: 3px solid #000000;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:link, :visited, :active{
+    color: #1F2C66;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #A97554;
 }
 
 #contenedorTitulo {
-    font-size: 32px;
+    font-size: 36px;
     margin: 15px;
+    margin-top: 70px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    color: #573B26;
 }
 
 
@@ -56,10 +89,15 @@ button {
 
 p {
     margin: 2px;
-    font-size: 24px;
-    text-decoration: underline;    
+    font-size: 30px;
     display: flex;
     justify-content: center;
+    color: #0692F7;
+}
+
+div p {
+    margin-top: 10px;
+    margin-bottom: 70px;
 }
 
 #form3 label {
@@ -80,10 +118,20 @@ ul {
 
 ul li {
     margin: 15px;
-    padding: 5px;
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     list-style: none;
     text-decoration: none;
     font-size: 20px;
+    background-color: #578491;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+ul li:hover {
+    background-color: #6397a5;
+    border: 4px solid #000000;
 }
 
 ul li:visited {
@@ -91,10 +139,46 @@ ul li:visited {
     color: none;
 }
 
-form {
-    display: grid;
-    justify-content: center;
-    margin: 20px;
+ul li a {
+    font-size: 24px;
+}
 
-    background-color: grey;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(169, 117, 84, 0.7);
+    height: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 800px;
+    text-align: center;
+}
+
+
+
+form p {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 10px;
+    color: #045691;
+}
+
+#descuentosDiv {
+    height: auto;
+}
+
+#descuentosDiv div #contenedorTitulo h1 {
+    margin-top: -50px;
+}
+
+#descuentosDiv div {
+    align-items: center;
+}
+
+#form4 {
+    margin-bottom: 20px;
 }
